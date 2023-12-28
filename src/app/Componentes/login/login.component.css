@@ -1,0 +1,11 @@
+.contenedorPrincipal{
+    width: 50%;
+    height:70%;
+}
+.contenedorLogin{
+    height:100%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
