@@ -1,0 +1,35 @@
+.container{
+    height:70vh;
+}
+
+.profileContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* border: solid 2px red; */
+}
+.profileContainer mat-form-field {
+    width:30%;
+    min-width: 200px;
+}
+.labelsProfile{
+    font-size:large;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    /* border: solid 2px blue; */
+    width:30%;
+    min-width: 200px;
+    line-height: 50px;
+}
+.updateButtonsContainer{
+    /* border: solid 2px white; */
+    width: 30%;
+    min-width:200px;
+    display: flex;
+    justify-content: center;
+}
+.updateButtonsContainer button:first-child{
+    margin-right:1%;
+}

@@ -1,0 +1,49 @@
+<main class="container">
+    <div class="profileContainer">
+        <h1>My profile</h1>
+        @if(!editProfile){
+        <div class="labelsProfile">
+            <label><b>Name:</b> {{ userData?.name }}</label>
+            <label><b>Email:</b> {{ userData?.email }}</label>
+        </div>
+        <button mat-raised-button color="primary" (click)="editProfile=!editProfile">Edit</button>
+
+        }
+        @else{
+        <div class="labelsProfile">
+
+            <label><b>Email:</b> {{ userData?.email }}</label>
+        </div>
+
+        <mat-form-field>
+            <mat-label>Name</mat-label>
+            <input matInput placeholder="..." [value]="userData?.name">
+        </mat-form-field>
+
+
+        <mat-form-field>
+            <mat-label>Enter your password</mat-label>
+            <input matInput [type]="hide ? 'password' : 'text'" placeholder="...">
+            <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
+                [attr.aria-pressed]="hide">
+                <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+            </button>
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>Repeat your password</mat-label>
+            <input matInput [type]="hide ? 'password' : 'text'" placeholder="...">
+            <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
+                [attr.aria-pressed]="hide">
+                <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+            </button>
+        </mat-form-field>
+
+        <div class="updateButtonsContainer">
+            <button mat-raised-button (click)="editProfile=!editProfile">Cancel</button>
+            <button mat-raised-button color="primary">Update</button>
+        </div>
+        }
+    </div>
+
+</main>
